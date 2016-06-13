@@ -9,13 +9,18 @@
     <version>1.0-SNAPSHOT</version>
 
     <properties>
-        <poi.version>3.9</poi.version>
+        <poi.version>3.14</poi.version>
     </properties>
 
     <dependencies>
         <dependency>
             <groupId>org.apache.poi</groupId>
             <artifactId>poi</artifactId>
+            <version>${poi.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.poi</groupId>
+            <artifactId>poi-ooxml</artifactId>
             <version>${poi.version}</version>
         </dependency>
         <dependency>

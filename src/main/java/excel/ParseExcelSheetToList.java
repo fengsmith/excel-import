@@ -1,11 +1,8 @@
 package excel;
 
 import mapping.FieldNameAndType;
-import org.apache.poi.hssf.usermodel.HSSFWorkbook;
-import org.apache.poi.ss.usermodel.Cell;
-import org.apache.poi.ss.usermodel.Row;
-import org.apache.poi.ss.usermodel.Sheet;
-import org.apache.poi.ss.usermodel.Workbook;
+import org.apache.poi.ss.usermodel.*;
+
 import java.io.IOException;
 import java.io.InputStream;
 import java.lang.reflect.InvocationTargetException;
@@ -42,7 +39,7 @@ public class ParseExcelSheetToList<T> {
         this.fieldNameAndTypes = fieldNameAndTypes;
 
         try {
-            Workbook workbook = new HSSFWorkbook(inputStream);
+            Workbook workbook = WorkbookFactory.create(inputStream);
             sheet = workbook.getSheetAt(0);
         } catch (IOException e) {
             e.printStackTrace();

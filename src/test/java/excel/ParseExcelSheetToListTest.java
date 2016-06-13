@@ -32,7 +32,8 @@ public class ParseExcelSheetToListTest {
 
     @Test
     public void testGetList() throws Exception {
-        String excelPath = "students.xls";
+//        String excelPath = "students.xls";
+        String excelPath = "test.xlsx";
 
         InputStream inputStream = ClassLoader.getSystemResourceAsStream(excelPath);
         ParseExcelSheetToList<Student> parseExcelSheetToList = new ParseExcelSheetToList<Student>(inputStream,
