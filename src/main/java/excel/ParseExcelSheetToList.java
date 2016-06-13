@@ -43,7 +43,7 @@ public class ParseExcelSheetToList<T> {
             sheet = workbook.getSheetAt(0);
         } catch (IOException e) {
             e.printStackTrace();
-            throw new Exception("construct HSSFWorkbook failed");
+            throw new Exception("construct Workbook failed");
         } finally {
             if (inputStream != null) {
                 try {
